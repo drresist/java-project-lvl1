@@ -1,4 +1,4 @@
-name: Run Gradle on commit
+name: gradle-build
 on: push
 jobs:
   gradle:
