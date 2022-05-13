@@ -1,61 +1,30 @@
-package hexlet.code;
+package hexlet.code.games;
 
-import java.util.Random;
-import java.util.Scanner;
+public final class Even implements Game {
+    private String question;
+    private String answer;
 
-public class Even implements Game {
-    public static void startGame() {
-        try (Scanner sc = new Scanner(System.in)) {
-			String name = Cli.welcome();
-			System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
-			boolean complete = false;
-			int counter = 0;
-			while (!complete) {
-			    int taskNumber = generateTask();
-			    System.out.println("Question: " + taskNumber);
-			    System.out.print("Your answer: ");
-			    String userAnswer = sc.next();
-			    if (checkAnswer(userAnswer, taskNumber)) {
-			        counter++;
-			        System.out.println("Correct!");
-			        if (counter == 3) {
-			            System.out.printf("Congratulations, %s!", name);
-			            complete = true;
-			        }
-			    } else {
-			        System.out.printf("'%s' is wrong answer :(. Correct answer was '%s'\n",
-			                userAnswer,
-			                opositeAnswer(userAnswer));
-			        System.out.printf("Let's try again, %s!", name);
-			        break;
-			    }
-			}
-		}
-
-
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
-    private static String opositeAnswer(String userAnswer) {
-        if (userAnswer.equalsIgnoreCase("yes")) {
-            return "no";
+    public String getAnswer() {
+        return answer;
+    }
+
+    public String generateTask() {
+        int a = (int) (Math.random() * 100);
+
+        if (a % 2 == 0) {
+            setAnswer("Yes");
         } else {
-            return "yes";
+            setAnswer("No");
         }
+        return String.valueOf(a);
     }
 
-    private static boolean checkAnswer(String userAnswer, int taskNumber) {
-        boolean isOdd = taskNumber % 2 == 0;
-        if (userAnswer.equalsIgnoreCase("yes") && isOdd) {
-            return true;
-        } else {
-            return userAnswer.equalsIgnoreCase("no") && !isOdd;
-        }
+    @Override
+    public String getRules() {
+        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
-
-    private static int generateTask() {
-        Random r = new Random();
-        return r.nextInt(100) + 1; // 100 - set range from 1 to 100
-    }
-
-
 }
