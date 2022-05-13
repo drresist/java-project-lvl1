@@ -9,7 +9,7 @@ public final class Progression implements Game {
     public String generateTask() {
         Random random = new Random();
         final int minBound = 7;
-        final int maxBound = 7;
+        final int maxBound = 10;
         int progressionLen = random.nextInt(minBound, maxBound);
         int diff = random.nextInt(maxBound);
         int answerIndex = random.nextInt(0, progressionLen - 1); // task index
