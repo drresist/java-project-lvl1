@@ -64,7 +64,7 @@ public class Engine {
         }
         //'yes' is wrong answer ;(. Correct answer was 'no'.
         System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'%n", userAnswer, correctAnswer);
-        System.out.printf("Let's try again, %s%n", Cli.getUserName());
+        System.out.printf("Let's try again, %s!%n", Cli.getUserName());
         return false;
     }
 }
