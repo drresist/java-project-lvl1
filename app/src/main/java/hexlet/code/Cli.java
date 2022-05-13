@@ -28,6 +28,7 @@ public class Cli {
                 3 - Calc
                 4 - GCD
                 5 - Progression
+                6 - Prime
                 0 - Exit
                 Your choice:\s""");
         try (Scanner scanner = new Scanner(System.in)) {
@@ -38,6 +39,7 @@ public class Cli {
                 case 3 -> Engine.startGame(3);
                 case 4 -> Engine.startGame(4);
                 case 5 -> Engine.startGame(5);
+                case 6 -> Engine.startGame(6);
                 default -> {
                 }
             }

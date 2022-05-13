@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 public final class Even implements Game {
-    private String question;
     private String answer;
 
     public void setAnswer(String answer) {
