@@ -19,7 +19,7 @@ public class Engine {
         System.out.println(game.getRules());
         int counter = 0;
         while (counter != 3) {
-            System.out.println(game.generateTask());
+            System.out.println("Question: " + game.generateTask());
             System.out.print("Your answer: ");
             if (validateAnswer(game.getAnswer())) {
                 counter += 1;
