@@ -3,8 +3,8 @@ package hexlet.code.games;
 public final class Even implements Game {
     private String answer;
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setAnswer(String correctAnswer) {
+        this.answer = correctAnswer;
     }
 
     public String getAnswer() {
@@ -12,7 +12,8 @@ public final class Even implements Game {
     }
 
     public String generateTask() {
-        int a = (int) (Math.random() * 100);
+        final int multiplyer = 100;
+        int a = (int) (Math.random() * multiplyer);
 
         if (a % 2 == 0) {
             setAnswer("Yes");

@@ -18,7 +18,8 @@ public class Engine {
         assert game != null;
         System.out.println(game.getRules());
         int counter = 0;
-        while (counter != 3) {
+        final int winCondition = 3;
+        while (counter != winCondition) {
             System.out.println("Question: " + game.generateTask());
             System.out.print("Your answer: ");
             if (validateAnswer(game.getAnswer())) {
@@ -27,30 +28,23 @@ public class Engine {
                 break;
             }
         }
-        if (counter == 3) {
+        if (counter == winCondition) {
             System.out.printf("Congratulations, %s!%n", userName);
         }
     }
 
     private static Game selectGame(int gameType) {
-        switch (gameType) {
-            case 2 -> {
-                return new Even();
-            }
-            case 3 -> {
-                return new Calc();
-            }
-            case 4 -> {
-                return new GCD();
-            }
-            case 5 -> {
-                return  new Progression();
-            }
-            case 6 -> {
-                return new Prime();
-            }
-            default -> {
-            }
+        final String strGameType = String.valueOf(gameType);
+        if (strGameType.equalsIgnoreCase("2")) {
+            return new Even();
+        } else if (strGameType.equalsIgnoreCase("3")) {
+            return new Calc();
+        } else if (strGameType.equalsIgnoreCase("4")) {
+            return new GCD();
+        } else if (strGameType.equalsIgnoreCase("5")) {
+            return new Progression();
+        } else if (strGameType.equalsIgnoreCase("6")) {
+            return new Prime();
         }
         return null;
     }

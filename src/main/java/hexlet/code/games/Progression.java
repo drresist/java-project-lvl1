@@ -8,8 +8,10 @@ public final class Progression implements Game {
     @Override
     public String generateTask() {
         Random random = new Random();
-        int progressionLen = random.nextInt(7, 10);
-        int diff = random.nextInt(10);
+        final int minBound = 7;
+        final int maxBound = 7;
+        int progressionLen = random.nextInt(minBound, maxBound);
+        int diff = random.nextInt(maxBound);
         int answerIndex = random.nextInt(0, progressionLen - 1); // task index
         StringBuilder task = new StringBuilder();
         int base = diff;
@@ -37,7 +39,7 @@ public final class Progression implements Game {
     }
 
     @Override
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setAnswer(String correctAnswer) {
+        this.answer = correctAnswer;
     }
 }

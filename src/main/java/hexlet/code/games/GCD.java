@@ -5,8 +5,9 @@ public final class GCD implements Game {
 
     @Override
     public String generateTask() {
-        int a = (int) (Math.random() * 100);
-        int b = (int) (Math.random() * 100);
+        final int multyplyer = 100;
+        int a = (int) (Math.random() * multyplyer);
+        int b = (int) (Math.random() * multyplyer);
 
         setAnswer(String.valueOf(gcd(a, b)));
         return String.format("%d %d", a, b);
@@ -28,7 +29,7 @@ public final class GCD implements Game {
     }
 
     @Override
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setAnswer(String correctAnswer) {
+        this.answer = correctAnswer;
     }
 }

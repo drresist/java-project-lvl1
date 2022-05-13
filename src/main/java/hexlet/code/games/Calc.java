@@ -13,13 +13,14 @@ public final class Calc implements Game {
         return answer;
     }
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setAnswer(String correctAnswer) {
+        this.answer = correctAnswer;
     }
 
     public String generateTask() {
-        int a = (int) (Math.random() * 100);
-        int b = (int) (Math.random() * 100);
+        final int multiplier = 100;
+        int a = (int) (Math.random() * multiplier);
+        int b = (int) (Math.random() * multiplier);
 
         int randomNum = new Random().nextInt(actions.length);
         String action = actions[randomNum];

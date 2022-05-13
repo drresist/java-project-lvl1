@@ -7,9 +7,9 @@ public final class Prime implements Game {
 
     @Override
     public String generateTask() {
-
+        final int maxBound = 100;
         Random random = new Random();
-        int randomInt = random.nextInt(100);
+        int randomInt = random.nextInt(maxBound);
         boolean flag = false;
         setAnswer("Yes");
         for (int i = 2; i <= randomInt / 2; ++i) {
@@ -38,7 +38,7 @@ public final class Prime implements Game {
     }
 
     @Override
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setAnswer(String correctAnswer) {
+        this.answer = correctAnswer;
     }
 }

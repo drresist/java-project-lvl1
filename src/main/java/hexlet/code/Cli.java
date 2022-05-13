@@ -33,15 +33,10 @@ public class Cli {
                 Your choice:\s""");
         try (Scanner scanner = new Scanner(System.in)) {
             int gameVariant = scanner.nextInt();
-            switch (gameVariant) {
-                case 1 -> Cli.welcome();
-                case 2 -> Engine.startGame(2);
-                case 3 -> Engine.startGame(3);
-                case 4 -> Engine.startGame(4);
-                case 5 -> Engine.startGame(5);
-                case 6 -> Engine.startGame(6);
-                default -> {
-                }
+            if (gameVariant == 1) {
+                Cli.welcome();
+            } else {
+                Engine.startGame(gameVariant);
             }
         }
     }
