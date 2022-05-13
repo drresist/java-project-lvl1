@@ -16,12 +16,12 @@ public final class Progression implements Game {
         for (int i = 0; i < progressionLen; i++) {
             base += diff;
             if (answerIndex != i) {
-                task.append(base)
-                        .append(" ");
+                task.append(base);
             } else {
                 setAnswer(String.valueOf(base));
-                task.append(" .. ");
+                task.append("..");
             }
+            task.append(" ");
         }
         return task.toString();
     }
