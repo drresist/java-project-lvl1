@@ -48,3 +48,48 @@ The user must give the correct answer to three consecutive questions. After a su
 ```
 Congratulations, Bill!
 ```
+
+
+### Calc game
+<details open>
+<summary>Asciinema</summary>
+<br>
+
+[![asciicast](https://asciinema.org/a/Y0OTz8QRKOwimyCCSbSPDT8CG.svg)](https://asciinema.org/a/Y0OTz8QRKOwimyCCSbSPDT8CG)
+</details>
+You need to implement the game "Calculator". The essence of the game is as follows: 
+the user is shown a random mathematical expression, such as 35 + 16, 
+which must be calculated and write down the correct answer.
+
+```shell
+Welcome to the Brain Games!
+May I have your name? Sam
+Hello, Sam!
+What is the result of the expression?
+Question: 12 * 9
+Your answer: 108
+Correct!
+Question: 17 + 10
+Your answer: 27
+Correct!
+Question: 9 - 11
+Your answer: -2
+Correct!
+Congratulations, Sam!
+```
+* If the user gives the wrong answer, it is necessary to end the game and display a message:
+
+    ```shell
+    '11' is wrong answer ;(. The correct answer was '15'.
+    Let's try again, Bill!
+    ```
+* If the user gives the correct answer, the message should display:
+
+`Correct!`
+and go on to the next number.
+
+The user must give the correct answer to three consecutive questions. After a successful game, it should display:
+
+```
+Congratulations, Bill!
+```
