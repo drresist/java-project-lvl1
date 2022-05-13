@@ -1,9 +1,10 @@
 package hexlet.code;
 
+import hexlet.code.games.Game;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.Progression;
 import hexlet.code.games.GCD;
-import hexlet.code.games.Game;
 
 import java.util.Scanner;
 
@@ -40,6 +41,9 @@ public class Engine {
             }
             case 4 -> {
                 return new GCD();
+            }
+            case 5 -> {
+                return  new Progression();
             }
             default -> {
             }

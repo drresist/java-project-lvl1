@@ -89,7 +89,6 @@ Congratulations, Sam!
 and go on to the next number.
 
 
-
 ### GCD game
 
 <details open>
@@ -103,6 +102,23 @@ The essence of the game is as follows: the user is shown two random numbers, for
 The user must calculate and enter the greatest common divisor of these numbers .
 
 
+
+
+### Progression
+
+<details open>
+<summary>Asciinema</summary>
+<br>
+
+[![asciicast](https://asciinema.org/a/ndKRhQDNYiTFkOOowOesu0fDF.svg)](https://asciinema.org/a/ndKRhQDNYiTFkOOowOesu0fDF)
+</details>
+
+
+Show the player a series of numbers forming an arithmetic progression, replacing any of the numbers with two dots. 
+The player must determine that number.
+
+
+### Final rule
 _The user must give the correct answer to three consecutive questions. After a successful game, it should display:_
 
 ```
