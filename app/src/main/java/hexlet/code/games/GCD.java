@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-public class GCD implements Game{
+public final class GCD implements Game {
     private String answer;
 
     @Override
@@ -8,12 +8,15 @@ public class GCD implements Game{
         int a = (int) (Math.random() * 100);
         int b = (int) (Math.random() * 100);
 
-        setAnswer(String.valueOf(gcd(a,b)));
-        return String.format("%d %d", a,b);
+        setAnswer(String.valueOf(gcd(a, b)));
+        return String.format("%d %d", a, b);
 
     }
 
-    public int gcd(int a, int b) { return b==0 ? a : gcd(b, a%b); }
+    public int gcd(int a, int b) {
+        return b == 0 ? a : gcd(b, a % b);
+    }
+
     @Override
     public String getRules() {
         return "Find the greatest common divisor of given numbers.";

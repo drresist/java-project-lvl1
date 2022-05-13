@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 public interface Game {
 
-    String answer = null;
+    String ANSWER = null;
 
     String generateTask();
     String getRules();

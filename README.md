@@ -88,7 +88,22 @@ Congratulations, Sam!
 `Correct!`
 and go on to the next number.
 
-The user must give the correct answer to three consecutive questions. After a successful game, it should display:
+
+
+### GCD game
+
+<details open>
+<summary>Asciinema</summary>
+<br>
+
+[![asciicast](https://asciinema.org/a/QtQsNAmRz4KmSVEZEsa20wth4.svg)](https://asciinema.org/a/QtQsNAmRz4KmSVEZEsa20wth4)
+</details>
+
+The essence of the game is as follows: the user is shown two random numbers, for example, 25 50. 
+The user must calculate and enter the greatest common divisor of these numbers .
+
+
+_The user must give the correct answer to three consecutive questions. After a successful game, it should display:_
 
 ```
 Congratulations, Bill!

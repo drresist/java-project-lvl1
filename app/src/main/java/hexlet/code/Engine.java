@@ -25,7 +25,9 @@ public class Engine {
                 break;
             }
         }
-        if (counter == 3) System.out.printf("Congratulations, %s!%n", userName);
+        if (counter == 3) {
+            System.out.printf("Congratulations, %s!%n", userName);
+        }
     }
 
     private static Game selectGame(int gameType) {
