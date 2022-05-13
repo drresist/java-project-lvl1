@@ -3,20 +3,11 @@ package hexlet.code.games;
 import java.util.Random;
 
 public final class Calc implements Game {
-    public Calc() {
-    }
-
     public String getRules() {
         return "What is the result of the expression?";
     }
-
     private final String[] actions = new String[]{"+", "-", "*"};
-    private String question;
     private String answer;
-
-    public String getQuestion() {
-        return question;
-    }
 
     public String getAnswer() {
         return answer;

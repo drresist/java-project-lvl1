@@ -26,6 +26,7 @@ public class Cli {
                 1 - Greet
                 2 - Even
                 3 - Calc
+                4 - GCD
                 0 - Exit
                 Your choice:\s""");
         try (Scanner scanner = new Scanner(System.in)) {
@@ -34,6 +35,7 @@ public class Cli {
                 case 1 -> Cli.welcome();
                 case 2 -> Engine.startGame(2);
                 case 3 -> Engine.startGame(3);
+                case 4 -> Engine.startGame(4);
                 default -> {
                 }
             }

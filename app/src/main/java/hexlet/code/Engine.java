@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 import hexlet.code.games.Game;
 
 import java.util.Scanner;
@@ -24,7 +25,7 @@ public class Engine {
                 break;
             }
         }
-        System.out.printf("Congratulations, %s!%n", userName);
+        if (counter == 3) System.out.printf("Congratulations, %s!%n", userName);
     }
 
     private static Game selectGame(int gameType) {
@@ -34,6 +35,9 @@ public class Engine {
             }
             case 3 -> {
                 return new Calc();
+            }
+            case 4 -> {
+                return new GCD();
             }
             default -> {
             }
